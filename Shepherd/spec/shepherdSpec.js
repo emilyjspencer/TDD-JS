@@ -16,4 +16,12 @@ describe('Shepherd', function(){
     shepherd.herd(sheep)
     expect(shepherd.pen).toEqual([sheep, sheep]);
   });
+
+  it('can return the number of sheep in the pen', function(){
+    shepherd = new Shepherd();
+    sheep = new Sheep();
+    for(let step = 0; step < 20; step++) {shepherd.herd(sheep)};
+    expect(shepherd.pen.length).toEqual(20)
+  });
+
 });
