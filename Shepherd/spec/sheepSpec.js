@@ -8,4 +8,9 @@ describe('Sheep', function(){
     expect(sheep.name).toEqual('Mog')
   });
 
+  it('can say its name', function() {
+    sheep = new Sheep('Maggie');
+    expect(sheep.speak()).toEqual('My name is Maggie');
+  });
+
 });
